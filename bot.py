@@ -15,7 +15,7 @@ client = discord.Client(intents=intents)
 robloxClient = RobloxClient(ROBLOX_TOKEN)
 requests = robloxClient.requests
 
-@tasks.loop(seconds=20)
+@tasks.loop(seconds=60)
 async def myloop():
     if client.trackerChannel:
         response = await requests.get("https://friends.roblox.com/v1/users/513778147/friends/online")
